@@ -215,7 +215,7 @@ The table shows  Mean Absolute Error (MAE) and Mean Absolute Percent Error (MAPE
 ![The overview of the results](./figures/results.png)
 
 # :wrench: Setup
-requires CUDA 12.1 on Linux. then run `setup_updated.sh`
+deepshiksharma's fork edit: Requires CUDA 12.1 on Linux. Then run `setup_updated.sh`
 
 
 You can use either [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or [`uv`](https://docs.astral.sh/uv/getting-started/installation/) with this toolbox. Most users are already familiar with `conda`, but `uv` may be a bit less familiar - check out some highlights about `uv` [here](https://docs.astral.sh/uv/#highlights). If you use `uv`, it's highly recommended you do so independently of `conda`, meaning you should make sure you're not installing anything in the base `conda` environment or any other `conda` environment. If you're having trouble making sure you're not in your base `conda` environment, try setting `conda config --set auto_activate_base false`.

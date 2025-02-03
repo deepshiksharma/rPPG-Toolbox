@@ -1,3 +1,31 @@
+# deepshiksharma's fork modifications
+
+## Setup
+This code was run on Ubuntu Linux with CUDA 12.1 and Python 3.8.20 in a conda environment.
+
+The CUDA version that PyTorch is installed with must match the system's CUDA version.
+
+Check CUDA version on system, then run `./setup_updated.sh`
+
+## Training
+Dataset goes in the `./RawData` directory. Refer [📁 Datasets](#datasets) for the exact directory structure.
+
+Check `./main.py` and configuration `.yaml` files inside `./configs/train_configs`
+
+### Default configuration
+Default `--config_file` has been set to `./UBFC-rPPG_PHYSNET.yaml`
+
+`DO_PREPROCESS: True` for the default config.
+Preprocessed data and data file lists are saved to the `./Cache_and_FileLists` directory.
+
+Plots and outputs are saved to the `./Runs/exp` directory. Test outputs that can be visualized are saved to `./Runs/exp/Test_Outputs`
+
+### Visualization
+A notebook for visualizing test results can be found in the `./tools/output_signal_viz` directory, along with its README. 
+
+The notebook generates visualizations from the `.pickle` file saved to `./Runs/exp/Test_Outputs` 
+
+
 <p align="center">
 Please remember to :star: this repo if you find it useful and cite our work if you end up using it in your work!
 </p>
@@ -215,8 +243,6 @@ The table shows  Mean Absolute Error (MAE) and Mean Absolute Percent Error (MAPE
 ![The overview of the results](./figures/results.png)
 
 # :wrench: Setup
-**`deepshiksharma`'s fork edit**: Requires CUDA 12.1 on Linux, then run `setup_updated.sh`
-
 
 You can use either [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or [`uv`](https://docs.astral.sh/uv/getting-started/installation/) with this toolbox. Most users are already familiar with `conda`, but `uv` may be a bit less familiar - check out some highlights about `uv` [here](https://docs.astral.sh/uv/#highlights). If you use `uv`, it's highly recommended you do so independently of `conda`, meaning you should make sure you're not installing anything in the base `conda` environment or any other `conda` environment. If you're having trouble making sure you're not in your base `conda` environment, try setting `conda config --set auto_activate_base false`.
 

@@ -1,10 +1,15 @@
 # deepshiksharma's fork modifications
 
 ## Setup
-This code was run on Ubuntu 22.04.5 LTS with NVIDIA driver version 550.144.03, CUDA 12.4 and Python 3.8.20 in a Conda environment.
+This code was run on:
+- Ubuntu 22.04.5 LTS
+- NVIDIA driver version 550.144.03
+- CUDA 12.4
+- Python 3.8.20 in a Conda environment.
 The CUDA version that PyTorch is installed with must match the system's CUDA version.
 
-Check if CUDA version on system is 12.4, then run `setup_updated.sh`. Otherwise, follow the steps outlined in `setup_updated.sh`, making changes as required.
+Install dependencies from `requirements.txt`
+If CUDA version on system is 12.4, then PyTorch with CUDA 12.4 suuport can be installed using the command in `install_pytorch.txt`; otherwise make changes as necessary.
 
 ## Training
 Check `main.py` and configuration `.yaml` files inside `configs/train_configs`
@@ -13,6 +18,7 @@ Check `main.py` and configuration `.yaml` files inside `configs/train_configs`
 Default `--config_file` has been set to `./UBFC-rPPG_PHYSNET.yaml`
 
 Dataset should be placed in the `./RawData` directory, with train, test, and valid datasets inside their respective subdirectories.
+```
     -----------------
          RawData/
          |   |-- train/
@@ -40,8 +46,8 @@ Dataset should be placed in the `./RawData` directory, with train, test, and val
          |   |   |   |-- vid.avi
          |   |   |   |-- ground_truth.txt
     -----------------
-
-NOTE: Dataset splits are meant to be configured from the yaml config file; need not be manually split as shown above. Adjust dataset directory and the yaml configuration file as required.
+```
+*NOTE: Dataset splits are meant to be configured from the yaml config file; need not be manually split as shown above. Adjust dataset directory and the yaml configuration file as required.*
 Refer to [📁 Datasets](#file_folder-datasets) for directory structures of other configs and datasets.
 
 `DO_PREPROCESS: True` for the default config.

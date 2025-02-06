@@ -25,7 +25,11 @@ A notebook for visualizing test results can be found in the `./tools/output_sign
 
 The notebook generates visualizations from the `.pickle` file saved to `./Runs/exp/Test_Outputs` 
 
+<br>
+
 ---
+
+<br>
 
 <p align="center">
 Please remember to :star: this repo if you find it useful and cite our work if you end up using it in your work!

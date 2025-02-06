@@ -1,29 +1,58 @@
 # deepshiksharma's fork modifications
 
 ## Setup
-This code was run on Ubuntu Linux with CUDA 12.1 and Python 3.8.20 in a conda environment.
-
+This code was run on Ubuntu 22.04.5 LTS with NVIDIA driver version 550.144.03, CUDA 12.4 and Python 3.8.20 in a Conda environment.
 The CUDA version that PyTorch is installed with must match the system's CUDA version.
 
-Check CUDA version on system, then run `./setup_updated.sh`
+Check if CUDA version on system is 12.4, then run `setup_updated.sh`. Otherwise, follow the steps outlined in `setup_updated.sh`, making changes as required.
 
 ## Training
-Dataset goes in the `./RawData` directory. Refer [📁 Datasets](#datasets) for the exact directory structure.
-
-Check `./main.py` and configuration `.yaml` files inside `./configs/train_configs`
+Check `main.py` and configuration `.yaml` files inside `configs/train_configs`
 
 ### Default configuration
 Default `--config_file` has been set to `./UBFC-rPPG_PHYSNET.yaml`
 
-`DO_PREPROCESS: True` for the default config.
-Preprocessed data and data file lists are saved to the `./Cache_and_FileLists` directory.
+Dataset should be placed in the `./RawData` directory, with train, test, and valid datasets inside their respective subdirectories.
+    -----------------
+         RawData/
+         |   |-- train/
+         |   |   |-- subject1/
+         |   |   |   |-- vid.avi
+         |   |   |   |-- ground_truth.txt
+         |   |   |...
+         |   |   |-- subjectn/
+         |   |   |   |-- vid.avi
+         |   |   |   |-- ground_truth.txt
+         |   |-- test/
+         |   |   |-- subject1/
+         |   |   |   |-- vid.avi
+         |   |   |   |-- ground_truth.txt
+         |   |   |...
+         |   |   |-- subjectn/
+         |   |   |   |-- vid.avi
+         |   |   |   |-- ground_truth.txt
+         |   |-- valid/
+         |   |   |-- subject1/
+         |   |   |   |-- vid.avi
+         |   |   |   |-- ground_truth.txt
+         |   |   |...
+         |   |   |-- subjectn/
+         |   |   |   |-- vid.avi
+         |   |   |   |-- ground_truth.txt
+    -----------------
 
-Plots and outputs are saved to the `./Runs/exp` directory. Test outputs that can be visualized are saved to `./Runs/exp/Test_Outputs`
+NOTE: Dataset splits are meant to be configured from the yaml config file; need not be manually split as shown above. Adjust dataset directory and the yaml configuration file as required.
+Refer to [📁 Datasets](#file_folder-datasets) for directory structures of other configs and datasets.
+
+`DO_PREPROCESS: True` for the default config.
+Preprocessed data and data file lists are saved to `./Cache_and_FileLists`
+
+Plots and outputs are saved to the `./Runs/exp` directory.
 
 ### Visualization
-A notebook for visualizing test results can be found in the `./tools/output_signal_viz` directory, along with its README. 
+A notebook for visualizing test results can be found in the `tools/output_signal_viz` directory, along with its README. 
 
-The notebook generates visualizations from the `.pickle` file saved to `./Runs/exp/Test_Outputs` 
+The notebook generates visualizations from a `.pickle` file saved to `./Runs/exp/saved_test_outputs` 
 
 <br>
 

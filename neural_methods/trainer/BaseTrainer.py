@@ -83,7 +83,7 @@ class BaseTrainer:
         ax = plt.gca()
         ax.yaxis.set_major_locator(MaxNLocator(integer=False, prune='both'))
 
-        loss_plot_filename = os.path.join(output_dir, filename_id + '_losses.pdf')
+        loss_plot_filename = os.path.join(output_dir, filename_id + '_losses.png')
         plt.savefig(loss_plot_filename, dpi=300)
         plt.close()
 
@@ -101,7 +101,7 @@ class BaseTrainer:
         ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True, useOffset=False))
         ax.ticklabel_format(axis='y', style='sci', scilimits=(0,0))  # Force scientific notation
 
-        lr_plot_filename = os.path.join(output_dir, filename_id + '_learning_rates.pdf')
+        lr_plot_filename = os.path.join(output_dir, filename_id + '_learning_rates.png')
         plt.savefig(lr_plot_filename, bbox_inches='tight', dpi=300)
         plt.close()
 

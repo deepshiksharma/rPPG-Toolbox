@@ -84,7 +84,7 @@ TEST:
       's50_T3', 's52_T3', 's53_T3']
       SELECT_TASKS: True
       TASK_LIST: ['T1', 'T2', 'T3']
-    FS: 35
+    FS: 30
     DATASET: UBFC-rPPG
     DO_PREPROCESS: True                  # if first time, should be true
     DATA_FORMAT: NCDHW

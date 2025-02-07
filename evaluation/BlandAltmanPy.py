@@ -89,7 +89,7 @@ class BlandAltman():
     def scatter_plot(self,x_label='Gold Standard',y_label='New Measure',
                     figure_size=(4,4), show_legend=True,
                     the_title=' ',
-                    file_name='BlandAltman_ScatterPlot.pdf',
+                    file_name='BlandAltman_ScatterPlot.png',
                     is_journal=False, measure_lower_lim=40, measure_upper_lim=150):
 
         if is_journal: # avoid use of type 3 fonts for journal paper acceptance
@@ -119,7 +119,7 @@ class BlandAltman():
     def difference_plot(self,x_label='Difference between rPPG HR and ECG HR [bpm]',
                         y_label='Average of rPPG HR and ECG HR [bpm]',averaged=False,
                         figure_size=(4,4),show_legend=True,
-                        the_title='',file_name='BlandAltman_DifferencePlot.pdf',
+                        the_title='',file_name='BlandAltman_DifferencePlot.png',
                         is_journal=False):
 
         if is_journal: # avoid use of type 3 fonts for journal paper acceptance

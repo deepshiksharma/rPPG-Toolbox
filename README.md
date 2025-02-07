@@ -6,10 +6,11 @@ This code was run on:
 - NVIDIA driver version 550.144.03
 - CUDA 12.4
 - Python 3.8.20 in a Conda environment.
+
 The CUDA version that PyTorch is installed with must match the system's CUDA version.
 
-Install dependencies from `requirements.txt`
-If CUDA version on system is 12.4, then PyTorch with CUDA 12.4 suuport can be installed using the command in `install_pytorch.txt`; otherwise make changes as necessary.
+Install dependencies from `requirements.txt` <br>
+If CUDA version on system is 12.4, then PyTorch with CUDA 12.4 suuport can be installed using the command in `install_pytorch.txt`; otherwise, make changes as necessary.
 
 ## Training
 Check `main.py` and configuration `.yaml` files inside `configs/train_configs`
@@ -19,33 +20,31 @@ Default `--config_file` has been set to `./UBFC-rPPG_PHYSNET.yaml`
 
 Dataset should be placed in the `./RawData` directory, with train, test, and valid datasets inside their respective subdirectories.
 ```
-    -----------------
-         RawData/
-         |   |-- train/
-         |   |   |-- subject1/
-         |   |   |   |-- vid.avi
-         |   |   |   |-- ground_truth.txt
-         |   |   |...
-         |   |   |-- subjectn/
-         |   |   |   |-- vid.avi
-         |   |   |   |-- ground_truth.txt
-         |   |-- test/
-         |   |   |-- subject1/
-         |   |   |   |-- vid.avi
-         |   |   |   |-- ground_truth.txt
-         |   |   |...
-         |   |   |-- subjectn/
-         |   |   |   |-- vid.avi
-         |   |   |   |-- ground_truth.txt
-         |   |-- valid/
-         |   |   |-- subject1/
-         |   |   |   |-- vid.avi
-         |   |   |   |-- ground_truth.txt
-         |   |   |...
-         |   |   |-- subjectn/
-         |   |   |   |-- vid.avi
-         |   |   |   |-- ground_truth.txt
-    -----------------
+  RawData/
+  |   |-- train/
+  |   |   |-- subject1/
+  |   |   |   |-- vid.avi
+  |   |   |   |-- ground_truth.txt
+  |   |   |...
+  |   |   |-- subjectn/
+  |   |   |   |-- vid.avi
+  |   |   |   |-- ground_truth.txt
+  |   |-- test/
+  |   |   |-- subject1/
+  |   |   |   |-- vid.avi
+  |   |   |   |-- ground_truth.txt
+  |   |   |...
+  |   |   |-- subjectn/
+  |   |   |   |-- vid.avi
+  |   |   |   |-- ground_truth.txt
+  |   |-- valid/
+  |   |   |-- subject1/
+  |   |   |   |-- vid.avi
+  |   |   |   |-- ground_truth.txt
+  |   |   |...
+  |   |   |-- subjectn/
+  |   |   |   |-- vid.avi
+  |   |   |   |-- ground_truth.txt
 ```
 *NOTE: Dataset splits are meant to be configured from the yaml config file; need not be manually split as shown above. Adjust dataset directory and the yaml configuration file as required.*
 Refer to [📁 Datasets](#file_folder-datasets) for directory structures of other configs and datasets.

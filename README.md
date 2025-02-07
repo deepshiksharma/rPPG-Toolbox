@@ -46,7 +46,7 @@ Dataset should be placed in the `./RawData` directory, with train, test, and val
   |   |   |   |-- vid.avi
   |   |   |   |-- ground_truth.txt
 ```
-*NOTE: Dataset splits are meant to be configured from the yaml config file; need not be manually split as shown above. Adjust dataset directory and the yaml configuration file as required.*
+*NOTE: Dataset splits are meant to be configured from the yaml config file; need not be manually split as shown above. Adjust dataset directory and the yaml configuration file as required.* <br>
 Refer to [📁 Datasets](#file_folder-datasets) for directory structures of other configs and datasets.
 
 `DO_PREPROCESS: True` for the default config.

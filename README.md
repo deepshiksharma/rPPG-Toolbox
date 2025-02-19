@@ -57,7 +57,7 @@ Preprocessed data and data file lists are saved to `./Cache_and_FileLists`
 Plots and outputs are saved to the `./Runs/exp` directory.
 
 ### Visualization
-A notebook for visualizing test results can be found in the `tools/output_signal_viz` directory, along with its README. 
+Notebooks to visualize test results can be found in the `tools/output_signal_viz` directory, along with a README. 
 
 The notebook generates visualizations from a `.pickle` file saved to `./Runs/exp/saved_test_outputs` 
 
